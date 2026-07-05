@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Макс — ЖК «Якоби-Парк»</title>
+    <!-- <meta http-equiv="refresh" content="10; URL=https://max.ru/join/6f4XAEqMGQY6RSePlbq4Y02-dL-mpjecFTX8A57i6vU" /> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(145deg, #f0f2f5 0%, #e6e9ed 100%);
+            padding: 20px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 40px 36px 32px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 16px;
+            transition: color 0.2s;
+        }
+        .back:hover {
+            color: #1a1a2e;
+        }
+        .icon-wrap {
+            background: #7c3aed;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.30);
+        }
+        .icon-wrap img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            object-fit: cover;
+            background-color: white;
+            padding: 3px;
+        }
+        .desc {
+            color: #6b7280;
+            font-size: 15px;
+            margin: 0 0 4px 0;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+        .qr-wrapper {
+            display: inline-block;
+            background: #f8f9fa;
+            padding: 16px;
+            border-radius: 16px;
+            border: 1px solid #eef2f6;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .qr-wrapper:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+        }
+        .qr-wrapper a {
+            display: block;
+            text-decoration: none;
+        }
+        .qr-wrapper img {
+            width: 200px;
+            height: 200px;
+            display: block;
+        }
+        .qr-label {
+            font-size: 14px;
+            color: #4b5563;
+            margin-top: 12px;
+            font-weight: 500;
+        }
+        .qr-label span {
+            display: inline-block;
+            background: #eef2f6;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+        .instruction {
+            font-size: 14px;
+            color: #4b5563;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #f0f2f5;
+            line-height: 1.5;
+        }
+        .instruction strong {
+            color: #1a1a2e;
+            font-weight: 600;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #9ca3af;
+            border-top: 1px solid #f0f2f5;
+            padding-top: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <a href="index.html" class="back">← Назад</a>
+
+        <div class="icon-wrap">
+            <img src="images/icon-max.png" alt="Макс" />
+        </div>
+
+        <p class="desc">Присоединяйтесь к нашему чату в</p>
+        <h1>Макс</h1>
+
+        <div class="qr-wrapper">
+            <a href="https://max.ru/join/6f4XAEqMGQY6RSePlbq4Y02-dL-mpjecFTX8A57i6vU" target="_blank">
+                <img src="images/qr-max.png" alt="QR-код Макс" />
+            </a>
+        </div>
+
+        <p class="qr-label">
+            Наведите камеру или кликните по QR-коду
+            <br /><span>для перехода в общий чат ЖК</span>
+        </p>
+
+        <div class="instruction">
+            <strong>Чтобы попасть в чат своего дома,</strong><br />
+            откройте приложение «Госуслуги.Дом» и на главном экране выберите раздел «Домовой чат».
+        </div>
+
+        <div class="footer">ЖК «Якоби-Парк»</div>
+    </div>
+</body>
+</html>
