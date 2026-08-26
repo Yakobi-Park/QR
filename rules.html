@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Регламент чата · ЖК «Якоби-Парк»</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Segoe UI', Roboto, Arial, sans-serif;
             background: linear-gradient(145deg, #f0f2f5 0%, #e6e9ed 100%);
@@ -19,6 +21,7 @@
             align-items: center;
             padding: 30px 20px;
         }
+
         .card {
             background: #ffffff;
             max-width: 860px;
@@ -28,7 +31,6 @@
             box-shadow: 0 24px 64px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.05);
         }
 
-        /* ===== Шапка ===== */
         .header-row {
             display: flex;
             align-items: center;
@@ -38,18 +40,18 @@
             padding-bottom: 18px;
             flex-wrap: wrap;
         }
+
         .logo-wrap {
             flex-shrink: 0;
         }
+
         .logo-wrap img {
             width: 64px;
             height: 64px;
             object-fit: cover;
-            border-radius: 50%;
             background: white;
-            border: 2px solid #eef0f3;
-            padding: 4px;
         }
+
         .title-group h1 {
             font-size: 24px;
             font-weight: 700;
@@ -57,12 +59,12 @@
             letter-spacing: -0.3px;
             line-height: 1.2;
         }
+
         .title-group .sub {
             font-size: 14px;
             color: #6b7280;
         }
 
-        /* ===== Вкладки ===== */
         .tabs {
             display: flex;
             gap: 6px;
@@ -71,6 +73,7 @@
             border-radius: 60px;
             padding: 4px;
         }
+
         .tab-btn {
             flex: 1;
             padding: 10px 16px;
@@ -84,24 +87,27 @@
             transition: all 0.25s ease;
             font-family: inherit;
         }
+
         .tab-btn:hover {
             color: #1f2937;
             background: rgba(255, 255, 255, 0.5);
         }
+
         .tab-btn.active {
             background: #ffffff;
             color: #1a1a2e;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
-        /* ===== Контент вкладок ===== */
         .tab-content {
             display: none;
             animation: fadeIn 0.3s ease;
         }
+
         .tab-content.active {
             display: block;
         }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -113,7 +119,6 @@
             }
         }
 
-        /* ===== Универсальный блок для краткой версии ===== */
         .block {
             background: #f8fafc;
             border-radius: 16px;
@@ -121,6 +126,7 @@
             margin: 12px 0 14px 0;
             border-left: 5px solid #2aabee;
         }
+
         .block h4 {
             font-size: 15px;
             font-weight: 700;
@@ -130,26 +136,32 @@
             align-items: center;
             gap: 8px;
         }
+
         .block p,
         .block li {
             font-size: 15px;
             line-height: 1.6;
             color: #2d3a4a;
         }
+
         .block p {
             margin-bottom: 6px;
         }
+
         .block p:last-child {
             margin-bottom: 0;
         }
+
         .block ul {
             padding-left: 20px;
             margin: 4px 0 2px 0;
         }
+
         .block ul li {
             margin-bottom: 4px;
             list-style-type: disc;
         }
+
         .block ul li:last-child {
             margin-bottom: 0;
         }
@@ -161,7 +173,6 @@
             color: #4b5563;
         }
 
-        /* ===== Полная версия (без блоков, просто текст) ===== */
         .full-rules h2 {
             font-size: 20px;
             font-weight: 600;
@@ -170,25 +181,30 @@
             padding-left: 0;
             border-left: none;
         }
+
         .full-rules h2:first-of-type {
             margin-top: 4px;
         }
+
         .full-rules h3 {
             font-size: 17px;
             font-weight: 600;
             color: #1f2937;
             margin: 22px 0 10px 0;
         }
+
         .full-rules p {
             font-size: 15px;
             line-height: 1.6;
             color: #2d3a4a;
             margin-bottom: 8px;
         }
+
         .full-rules ul {
             padding-left: 24px;
             margin: 6px 0 14px 0;
         }
+
         .full-rules li {
             font-size: 15px;
             line-height: 1.6;
@@ -197,7 +213,6 @@
             list-style-type: disc;
         }
 
-        /* ===== Футер ===== */
         .footer-note {
             margin-top: 28px;
             font-size: 13px;
@@ -206,6 +221,7 @@
             padding-top: 18px;
             text-align: center;
         }
+
         .footer-note span {
             background: #f1f5f9;
             padding: 4px 14px;
@@ -214,28 +230,33 @@
             color: #475569;
         }
 
-        /* ===== Адаптив ===== */
         @media (max-width: 550px) {
             .card {
                 padding: 20px 16px;
             }
+
             .header-row {
                 gap: 12px;
             }
+
             .title-group h1 {
                 font-size: 20px;
             }
+
             .logo-wrap img {
                 width: 52px;
                 height: 52px;
             }
+
             .tab-btn {
                 font-size: 13px;
                 padding: 8px 12px;
             }
+
             .block {
                 padding: 14px 16px;
             }
+
             .full-rules h2 {
                 font-size: 18px;
             }
@@ -244,7 +265,6 @@
 </head>
 <body>
     <div class="card">
-        <!-- ===== ШАПКА ===== -->
         <div class="header-row">
             <div class="logo-wrap">
                 <img src="images/logo-complex.png" alt="ЖК «Якоби-Парк»" />
@@ -255,79 +275,51 @@
             </div>
         </div>
 
-        <!-- ===== ВКЛАДКИ ===== -->
         <div class="tabs">
             <button class="tab-btn active" data-tab="short">📋 Кратко</button>
             <button class="tab-btn" data-tab="full">📖 Полный регламент</button>
         </div>
 
-        <!-- ===== КРАТКАЯ ВЕРСИЯ ===== -->
         <div id="short" class="tab-content active">
-
             <div class="block" style="border-left-color: #facc15;">
-                <h4>📌 Основные принципы общения</h4>
-                <ul>
-                    <li>Уважение и корректность - оскорбления запрещены</li>
-                    <li>Нецензурная лексика не допускается</li>
-                    <li>Политика и религия - не обсуждаем</li>
-                    <li>Личные вопросы - в личные сообщения</li>
-                </ul>
+                <h4>💬 Основные принципы общения</h4>
+                <p>Уважайте друг друга, не используйте нецензурную лексику, не обсуждайте политику и религию, личные вопросы решайте в личных сообщениях.</p>
             </div>
 
             <div class="block" style="border-left-color: #22c55e;">
-                <h4>✅ Разрешено (некоммерческие объявления)</h4>
-                <ul>
-                    <li>Потерянные / найденные вещи, ключи, документы, животные</li>
-                    <li>«Отдам даром», обмен личными вещами</li>
-                    <li>Просьбы о помощи соседей (инструмент, перенос вещей и т.п.)</li>
-                    <li>Оповещения об авариях, ЧП, происшествиях на территории ЖК</li>
-                    <li>Вопросы ЖКХ и содержания домов / придомовой территории</li>
-                </ul>
+                <h4>✅ Объявления (разрешено)</h4>
+                <p>Потерянные/найденные вещи и животные, «отдам даром», помощь соседей, оповещения о ЧП, вопросы ЖКХ.</p>
             </div>
 
             <!-- ===== ЗАКОММЕНТИРОВАНО ДЛЯ MAX ===== -->
             <!--
             <div class="block" style="border-left-color: #06b6d4;">
-                <h4>📎 Где размещать</h4>
-                <p>Объявления размещайте в <strong>соответствующей теме</strong> чата - так они дольше остаются на виду.</p>
-                <p style="margin-top: 4px;">❌ Недопустимо обсуждение в теме объявлений - для этого используйте <strong>общий чат</strong>.</p>
+                <h4>📎 Объявления размещайте в соответствующей теме чата</h4>
+                <p>так они дольше остаются на виду. Недопустимо обсуждение в теме объявлений - для этого используйте общий чат.</p>
             </div>
             -->
 
             <div class="block" style="border-left-color: #8b5cf6;">
-                <h4>⚠️ ФЗ №152 «О персональных данных»</h4>
-                <p>Публикация номеров телефонов и иных персональных данных в чате <strong>не допускается</strong> (в том числе своих).</p>
-                <p style="margin-top: 4px;">В объявлениях указывайте: <strong>«подробности в личные сообщения»</strong>.</p>
+                <p>⚠️ В соответствии с ФЗ №152 «О персональных данных» публикация номеров телефонов и иных персональных данных в чате не допускается (в том числе своих). В объявлениях указывайте: «подробности в личные сообщения».</p>
             </div>
 
             <div class="block" style="border-left-color: #ef4444;">
-                <h4>🚫 Реклама и коммерция (запрещено)</h4>
-                <ul>
-                    <li>Любые платные услуги (бытовые, транспортные, образовательные, бьюти и иные)</li>
-                    <li>Продажа товаров, сетевой маркетинг</li>
-                    <li>Приглашения в магазины, группы, каналы, другие ресурсы</li>
-                </ul>
+                <h4>🚫 Реклама (запрещено)</h4>
+                <p>Любые платные услуги (бытовые, транспортные, образовательные, бьюти и иные), продажа товаров, приглашения в магазины/каналы.</p>
             </div>
 
             <div class="block" style="border-left-color: #ef4444;">
-                <h4>❌ Аренда и посредники (запрещено)</h4>
-                <ul>
-                    <li>Сдача квартир, машино-мест и кладовых</li>
-                    <li>Публикации от посредников (агентств, риелторов и иных третьих лиц)</li>
-                </ul>
+                <p>❌ Сдача квартир, машино-мест и кладовых, а также публикации от посредников запрещены.</p>
             </div>
 
             <div class="block" style="border-left-color: #22c55e;">
                 <h4>⚖ Исключения</h4>
-                <p>✅ Разовая продажа <strong>личных вещей</strong> (не для перепродажи).</p>
-                <p>✅ Разовая продажа <strong>личных объектов недвижимости</strong> (квартиры, машино-места, кладовые).</p>
-                <p style="margin-top: 6px;"><strong>Важно:</strong> объявление публикуется <strong>один раз</strong>, дальнейшее обсуждение - в личных сообщениях. Повторное размещение в течение <strong>2 месяцев</strong> считается рекламой.</p>
+                <p>Разовая продажа личных вещей и объектов недвижимости (квартиры, машино-места, кладовые).</p>
+                <p>Объявление публикуется один раз, дальнейшее обсуждение - в личных сообщениях. Повторное размещение в течение 2 месяцев считается рекламой.</p>
             </div>
 
             <div class="block" style="border-left-color: #f59e0b;">
-                <h4>❗ Модерация</h4>
-                <p>Администраторы вправе удалять сообщения, нарушающие данные правила, <strong>без предупреждения</strong>.</p>
-                <p style="margin-top: 4px;">При повторных нарушениях - удаление из группы.</p>
+                <p>❗ Администраторы вправе удалять сообщения, нарушающие данные правила, без предупреждения. При повторных нарушениях - удаление из группы.</p>
             </div>
 
             <div class="short-thanks">
@@ -335,9 +327,7 @@
             </div>
         </div>
 
-        <!-- ===== ПОЛНАЯ ВЕРСИЯ (БЕЗ ЦВЕТНЫХ БЛОКОВ) ===== -->
         <div id="full" class="tab-content full-rules">
-
             <h2>1. Назначение чата</h2>
             <p>Чат создан жителями ЖК для живого соседского общения, обмена информацией о жизни комплекса и района, содержании домов и придомовой территории, а также для координации между соседями.</p>
             <p><strong>Цель:</strong> конструктивное взаимодействие, взаимопомощь и решение вопросов, связанных с проживанием.</p>
@@ -400,16 +390,13 @@
             <p><strong>6.1.</strong> Администраторы вправе удалять сообщения, нарушающие настоящий регламент, без предварительного уведомления.</p>
             <p><strong>6.2.</strong> При повторных или систематических нарушениях участник может быть ограничен в общении или удалён из чата.</p>
             <p><strong>6.3.</strong> В спорных ситуациях можно обратиться к администратору в личные сообщения.</p>
-
         </div>
 
-        <!-- ===== ФУТЕР ===== -->
         <div class="footer-note">
             <span>ЖК «Якоби-Парк» • Живу на берегу</span>
         </div>
     </div>
 
-    <!-- ===== СКРИПТ ПЕРЕКЛЮЧЕНИЯ ВКЛАДОК ===== -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const tabs = document.querySelectorAll('.tab-btn');
@@ -418,14 +405,18 @@
                 full: document.getElementById('full')
             };
 
-            tabs.forEach(btn => {
+            tabs.forEach(function(btn) {
                 btn.addEventListener('click', function() {
-                    tabs.forEach(b => b.classList.remove('active'));
+                    tabs.forEach(function(b) {
+                        b.classList.remove('active');
+                    });
                     this.classList.add('active');
 
-                    Object.values(contents).forEach(c => c.classList.remove('active'));
+                    Object.values(contents).forEach(function(c) {
+                        c.classList.remove('active');
+                    });
 
-                    const tabId = this.getAttribute('data-tab');
+                    var tabId = this.getAttribute('data-tab');
                     if (contents[tabId]) {
                         contents[tabId].classList.add('active');
                     }
