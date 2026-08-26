@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регламент чата · ЖК «Якоби-Парк»</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(145deg, #f0f2f5 0%, #e6e9ed 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+        }
+        .card {
+            background: #ffffff;
+            max-width: 860px;
+            width: 100%;
+            border-radius: 32px;
+            padding: 40px 45px 45px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+        }
+        /* шапка как в образце */
+        .header-row {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid #f0f2f5;
+            padding-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .logo-wrap {
+            flex-shrink: 0;
+        }
+        .logo-wrap img {
+            width: 68px;
+            height: 68px;
+            object-fit: cover;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #eef0f3;
+            padding: 4px;
+        }
+        .title-group h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a2e;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+        .title-group .sub {
+            font-size: 15px;
+            color: #6b7280;
+            margin-top: 4px;
+            font-weight: 400;
+        }
+        .title-group .badge {
+            display: inline-block;
+            background: #eef2ff;
+            color: #4338ca;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 3px 12px;
+            border-radius: 30px;
+            margin-top: 6px;
+            letter-spacing: 0.3px;
+        }
+        /* содержание регламента */
+        .regulation {
+            margin-top: 6px;
+        }
+        .regulation h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #111827;
+            margin: 28px 0 14px 0;
+            border-left: 6px solid #2aabee;
+            padding-left: 16px;
+        }
+        .regulation h2:first-of-type {
+            margin-top: 6px;
+        }
+        .regulation h3 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 22px 0 10px 0;
+        }
+        .regulation .subhead {
+            font-weight: 600;
+            color: #1f2937;
+            margin: 16px 0 6px 0;
+            font-size: 16px;
+        }
+        .regulation p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #2d3a4a;
+            margin-bottom: 8px;
+        }
+        .regulation ul, .regulation ol {
+            padding-left: 24px;
+            margin: 6px 0 14px 0;
+        }
+        .regulation li {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #2d3a4a;
+            margin-bottom: 6px;
+        }
+        .regulation .legal-note {
+            background: #f8fafc;
+            border-radius: 18px;
+            padding: 16px 22px;
+            margin: 20px 0 10px 0;
+            border-left: 5px solid #7c3aed;
+            font-size: 15px;
+        }
+        .regulation .legal-note strong {
+            color: #1e1b4b;
+        }
+        .regulation .bullet-block {
+            background: #f9fafb;
+            border-radius: 18px;
+            padding: 16px 22px;
+            margin: 12px 0 18px 0;
+        }
+        .regulation .bullet-block p {
+            margin-bottom: 4px;
+        }
+        .regulation .exception {
+            background: #f0fdf4;
+            border-radius: 16px;
+            padding: 12px 20px;
+            margin: 12px 0 10px 0;
+            border-left: 5px solid #22c55e;
+        }
+        .regulation .exception p {
+            margin-bottom: 2px;
+        }
+        .regulation hr {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 28px 0 8px 0;
+        }
+        .footer-note {
+            margin-top: 32px;
+            font-size: 14px;
+            color: #9ca3af;
+            border-top: 1px solid #edf2f7;
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .footer-note span {
+            background: #f1f5f9;
+            padding: 4px 14px;
+            border-radius: 60px;
+            font-size: 13px;
+            color: #475569;
+        }
+        @media (max-width: 550px) {
+            .card { padding: 28px 20px; }
+            .header-row { gap: 14px; }
+            .title-group h1 { font-size: 22px; }
+            .logo-wrap img { width: 56px; height: 56px; }
+            .regulation h2 { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <!-- шапка в стиле образца + регламент -->
+    <div class="header-row">
+        <div class="logo-wrap">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%232aabee'/%3E%3Cpath d='M30 40 L45 70 L70 35 L55 30 L45 55 L35 38 Z' fill='white'/%3E%3C/svg%3E" alt="ЖК Якоби-Парк" />
+        </div>
+        <div class="title-group">
+            <h1>ЖК «Якоби-Парк»</h1>
+            <div class="sub">Регламент общего чата жилого комплекса</div>
+            <div class="badge">🏘️ Соседское сообщество</div>
+        </div>
+    </div>
+
+    <!-- Текст регламента (полностью из файла) -->
+    <div class="regulation">
+        <h2>1️⃣ Назначение чата</h2>
+        <p>Чат создан жителями ЖК для живого соседского общения, обмена информацией о жизни комплекса и района, содержании домов и придомовой территории, а также для координации между соседями.</p>
+        <p><strong>Цель:</strong> конструктивное взаимодействие, взаимопомощь и решение вопросов, связанных с проживанием.</p>
+        <p>Сообщения, не относящиеся к тематике проживания, не допускаются.</p>
+
+        <h2>2️⃣ Участники чата</h2>
+        <p><strong>2.1.</strong> Участник должен быть идентифицируемым — по имени, понятному никнейму или фото. Аккаунты с автоматически сгенерированными, бессмысленными, оскорбительными или рекламными именами могут быть ограничены администраторами.</p>
+        <p><strong>2.2.</strong> Участники обязаны соблюдать законодательство РФ и настоящий регламент.</p>
+
+        <h2>3️⃣ Правила общения</h2>
+        <p><strong>3.1. Уважение.</strong> Общение должно быть корректным. Оскорбления, унижения, грубость и переход на личности запрещены.</p>
+        <p><strong>3.2. Лексика.</strong> Нецензурная лексика и её завуалированные формы (звёздочки, замена букв, намёки) не допускаются.</p>
+        <p><strong>3.3. Дискриминация.</strong> Запрещены любые дискриминационные высказывания и разжигание ненависти по любым признакам.</p>
+        <p><strong>3.4. Провокации.</strong> Не допускаются провокации, сознательное создание конфликтов, а также действия, провоцирующие конфликт своей формой. Любой конфликт можно уладить рациональным разговором.</p>
+        <p><strong>3.5. Личное.</strong> Вопросы, просьбы и сообщения, адресованные конкретному участнику, направляются в личные сообщения.</p>
+        <p><strong>3.6. Политика и острые темы.</strong> Политические обсуждения, агитация, религиозная пропаганда и иные темы, не связанные с жизнью ЖК и района, запрещены.</p>
+
+        <h2>4️⃣ Размещение информации</h2>
+        <h3>4.1. Разрешено (некоммерческие сообщения)</h3>
+        <ul>
+            <li>▫️ Потерянное/найденное (ключи, документы, карты, вещи, животные).</li>
+            <li>▫️ Обмен или бартер личными вещами, «отдам даром».</li>
+            <li>▫️ Просьбы о помощи соседей (одолжить инструмент, помочь с переносом вещей и др.).</li>
+            <li>▫️ Бытовые уведомления (оставленный свет в машине, открытое окно, сработала сигнализация, протечка, неисправность общедомовых коммуникаций).</li>
+            <li>▫️ Оповещения об авариях, чрезвычайных ситуациях и происшествиях на территории ЖК.</li>
+            <li>▫️ Вопросы содержания домов и придомовой территории.</li>
+        </ul>
+        <p><strong>4.1.1.</strong> Объявления размещаются в соответствующей теме. Комментарии в теме объявлений не допускаются, чтобы не засорять ленту. Обсуждение — в общем чате.</p>
+
+        <h3>4.2. Запрещено (реклама и коммерция)</h3>
+        <ul>
+            <li>▫️ Любые платные услуги (ремонт, клининг, перевозки, обучение, бьюти и иные).</li>
+            <li>▫️ Продажа товаров (включая сетевой маркетинг).</li>
+            <li>▫️ Регулярные или повторяющиеся объявления.</li>
+            <li>▫️ Акции, скидки, спецпредложения.</li>
+            <li>▫️ Приглашения в магазины, группы, каналы и другие ресурсы.</li>
+            <li>▫️ Спам, флуд, массовые рассылки, ссылки на вредоносные ресурсы.</li>
+            <li>▫️ Мошенничество, сбор денег под ложными предлогами и фейковые аккаунты.</li>
+        </ul>
+
+        <h3>4.3. Аренда и посредники</h3>
+        <p><strong>4.3.1.</strong> Сдача любых квартир, машино-мест и кладовых — запрещена.</p>
+        <p><strong>4.3.2.</strong> Публикации от посредников (агентств, риелторов и иных третьих лиц) — запрещены.</p>
+
+        <h3>4.4. Исключения</h3>
+        <div class="exception">
+            <p><strong>4.4.1.</strong> Разовая продажа личных вещей (не для перепродажи).</p>
+            <p><strong>4.4.2.</strong> Разовая продажа личных объектов недвижимости.</p>
+            <p><strong>4.4.3.</strong> Объявление публикуется один раз. Повторное размещение будет расценено как реклама.</p>
+        </div>
+
+        <h2>5️⃣ Персональные данные и конфиденциальность</h2>
+        <div class="legal-note">
+            <p><strong>5.1.</strong> В соответствии с ФЗ №152 «О персональных данных» публикация номеров телефонов и иных персональных данных в общем чате не допускается. В объявлениях указывайте: «подробности в личные сообщения». Даже собственные контакты лучше не публиковать, чтобы минимизировать риски мошенничества и несанкционированного распространения информации.</p>
+            <p><strong>5.2.</strong> Распространение персональных данных других участников без их согласия запрещено.</p>
+            <p><strong>5.3.</strong> Распространение переписки чата третьим лицам без согласия участников запрещено.</p>
+        </div>
+
+        <h2>6️⃣ Модерация</h2>
+        <p><strong>6.1.</strong> Администраторы вправе удалять сообщения, нарушающие настоящий регламент, без предварительного уведомления.</p>
+        <p><strong>6.2.</strong> При повторных или систематических нарушениях участник может быть ограничен в общении или удалён из чата.</p>
+        <p><strong>6.3.</strong> В спорных ситуациях можно обратиться к администратору в личные сообщения.</p>
+
+        <hr />
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin: 6px 0 0 0; font-size: 14px; color: #4b5563;">
+            <span style="background: #f1f5f9; padding: 6px 16px; border-radius: 40px;">🏘️ Регламент общего чата ЖК</span>
+            <span style="background: #f1f5f9; padding: 6px 16px; border-radius: 40px;">📌 Актуальная редакция</span>
+        </div>
+    </div>
+
+    <!-- нижняя часть в стиле образца -->
+    <div class="footer-note">
+        <span>ЖК «Якоби-Парк» • Живу на берегу</span>
+        <span>#соседи #регламент</span>
+    </div>
+</div>
+</body>
+</html>
