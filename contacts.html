@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты · ЖК «Якоби-Парк»</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(145deg, #f0f2f5 0%, #e6e9ed 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+        }
+        .card {
+            background: #ffffff;
+            max-width: 700px;
+            width: 100%;
+            border-radius: 32px;
+            padding: 32px 38px 38px;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.08), 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* ===== Шапка ===== */
+        .header-row {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #f0f2f5;
+            padding-bottom: 18px;
+            flex-wrap: wrap;
+        }
+        .logo-wrap {
+            flex-shrink: 0;
+        }
+        .logo-wrap img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #eef0f3;
+            padding: 4px;
+        }
+        .title-group h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a2e;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+        }
+        .title-group .sub {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* ===== Контакты ===== */
+        .contact-block {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin: 12px 0 14px 0;
+            border-left: 5px solid #2aabee;
+        }
+        .contact-block.emergency {
+            border-left-color: #ef4444;
+        }
+        .contact-block.management {
+            border-left-color: #8b5cf6;
+        }
+        .contact-block.service {
+            border-left-color: #22c55e;
+        }
+        .contact-block h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        .contact-block p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #2d3a4a;
+            margin-bottom: 2px;
+        }
+        .contact-block a {
+            color: #2aabee;
+            text-decoration: none;
+        }
+        .contact-block a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== Ссылка назад ===== */
+        .back-link {
+            text-align: center;
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px solid #edf2f7;
+        }
+        .back-link a {
+            color: #2aabee;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== Футер ===== */
+        .footer-note {
+            margin-top: 28px;
+            font-size: 13px;
+            color: #9ca3af;
+            border-top: 1px solid #edf2f7;
+            padding-top: 18px;
+            text-align: center;
+        }
+        .footer-note span {
+            background: #f1f5f9;
+            padding: 4px 14px;
+            border-radius: 60px;
+            font-size: 12px;
+            color: #475569;
+        }
+
+        /* ===== Адаптив ===== */
+        @media (max-width: 550px) {
+            .card {
+                padding: 20px 16px;
+            }
+            .header-row {
+                gap: 12px;
+            }
+            .title-group h1 {
+                font-size: 20px;
+            }
+            .logo-wrap img {
+                width: 52px;
+                height: 52px;
+            }
+            .contact-block {
+                padding: 14px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- ===== ШАПКА ===== -->
+        <div class="header-row">
+            <div class="logo-wrap">
+                <img src="images/logo-complex.png" alt="ЖК «Якоби-Парк»" />
+            </div>
+            <div class="title-group">
+                <h1>ЖК «Якоби-Парк»</h1>
+                <div class="sub">Контакты экстренных и коммунальных служб</div>
+            </div>
+        </div>
+
+        <!-- ===== КОНТАКТЫ ===== -->
+
+        <div class="contact-block emergency">
+            <h3>🚨 Аварийно-диспетчерская служба</h3>
+            <p>☎️ <a href="tel:+73952706464">+7(3952)70-64-64</a> (Круглосуточно)</p>
+        </div>
+
+        <div class="contact-block service">
+            <h3>🧰 Лифтовый сервис</h3>
+            <p>☎️ <a href="tel:+73952406080">+7(3952)40-60-80</a></p>
+        </div>
+
+        <div class="contact-block management">
+            <h3>🏢 Управляющая компания — ООО УКМ «Регион Сибири»</h3>
+            <p>📞 <a href="tel:+73952566995">+7(3952)56-69-95</a> (с 08:00 до 17:00, обед с 12:00 до 13:00)</p>
+            <p>✉️ <a href="mailto:region-sibiri@bk.ru">region-sibiri@bk.ru</a></p>
+            <p>🌐 <a href="https://xn--80abq2a2bs.xn--p1ai/" target="_blank">https://регион-сибири.рф</a></p>
+        </div>
+
+        <div class="contact-block emergency">
+            <h3>🏛️ Единая дежурная диспетчерская служба г. Иркутска</h3>
+            <p>📞 <a href="tel:+73952520112">+7(3952)520-112</a></p>
+            <p style="font-size: 14px; color: #6b7280; margin-top: 4px;">Координация действий аварийных служб города по жилищно-коммунальному хозяйству</p>
+        </div>
+
+        <div class="contact-block emergency">
+            <h3>🚔 ОБДПС (батальон) ГИБДД ГУ МВД России по Иркутской области</h3>
+            <p>📞 <a href="tel:+73952217601">+7(3952)217-601</a></p>
+            <p style="font-size: 14px; color: #6b7280; margin-top: 4px;">Информация об эвакуации автомобилей</p>
+        </div>
+
+        <div class="contact-block emergency">
+            <h3>👮 Дежурный отдела полиции ОП-2</h3>
+            <p>📞 <a href="tel:+73952420451">+7(3952)42-04-51</a></p>
+            <p style="font-size: 14px; color: #6b7280; margin-top: 4px;">ул. Бродского, д. 2а</p>
+        </div>
+
+        <!-- ===== ССЫЛКА НА РЕГЛАМЕНТ ===== -->
+        <div class="back-link">
+            <a href="rules.html">📋 Вернуться к регламенту чата</a>
+        </div>
+
+        <!-- ===== ФУТЕР ===== -->
+        <div class="footer-note">
+            <span>ЖК «Якоби-Парк» • Живу на берегу</span>
+        </div>
+    </div>
+</body>
+</html>
